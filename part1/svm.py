@@ -23,6 +23,8 @@ def one_vs_rest_svm(train_x, train_y, test_x):
     #print("error =", error)
     return y_pred
     raise NotImplementedError
+    
+##### Larger C parameter, SMALLER violation tolerance and margin sperating hyperplane #####
 
 
 def multi_class_svm(train_x, train_y, test_x):
@@ -47,4 +49,4 @@ def multi_class_svm(train_x, train_y, test_x):
 
 def compute_test_error_svm(test_y, pred_test_y):
     return 1 - np.mean(test_y == pred_test_y )
-    #raise NotImplementedError
+    raise NotImplementedError
