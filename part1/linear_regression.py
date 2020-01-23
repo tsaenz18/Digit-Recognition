@@ -24,8 +24,8 @@ def closed_form(X, Y, lambda_factor):
     theta = np.dot(W, np.transpose(Z))
     return theta
     raise NotImplementedError
-
-### Functions which are already complete, for you to use ###
+    
+##### Closed Form soultion optimizes mean squared error loss, NOT APPROPRIATE for a classifaction problem #####
 
 def compute_test_error_linear(test_x, Y, theta):
     test_y_predict = np.round(np.dot(test_x, theta))
