@@ -24,7 +24,11 @@ class CNN(nn.Module):
     def forward(self, x):
 
         # TODO use model layers to predict the two digits
-
+        xf = self.flatten(x)
+        out1 = F.relu(self.linear1(xf))
+        out2 = F.relu(self.linear2(out1))
+        out_first_digit = self.linear_first_digit(out2)
+        out_second_digit = self.linear_second_digit(out2)
         return out_first_digit, out_second_digit
 
 def main():
